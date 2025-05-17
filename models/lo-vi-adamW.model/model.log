@@ -1,0 +1,528 @@
+[Sat, 17 May 2025 09:48:20 INFO] .lo * src vocab size = 9485
+[Sat, 17 May 2025 09:48:20 INFO] .vi * tgt vocab size = 8376
+[Sat, 17 May 2025 09:48:20 INFO] Building model...
+[Sat, 17 May 2025 09:48:21 INFO] Transformer(
+  (encoder): Encoder(
+    (embed): Embedding(9485, 256)
+    (pe): PositionalEncoder(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (layers): ModuleList(
+      (0): EncoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (attn): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (1): EncoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (attn): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (2): EncoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (attn): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+      (3): EncoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (attn): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (norm): Norm()
+  )
+  (decoder): Decoder(
+    (embed): Embedding(8376, 256)
+    (pe): PositionalEncoder(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (layers): ModuleList(
+      (0): DecoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (norm_3): Norm()
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+        (dropout_3): Dropout(p=0.1, inplace=False)
+        (attn_1): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (attn_2): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+      )
+      (1): DecoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (norm_3): Norm()
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+        (dropout_3): Dropout(p=0.1, inplace=False)
+        (attn_1): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (attn_2): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+      )
+      (2): DecoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (norm_3): Norm()
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+        (dropout_3): Dropout(p=0.1, inplace=False)
+        (attn_1): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (attn_2): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+      )
+      (3): DecoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (norm_3): Norm()
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+        (dropout_3): Dropout(p=0.1, inplace=False)
+        (attn_1): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (attn_2): MultiHeadAttention(
+          (q_linear): Linear(in_features=256, out_features=256, bias=True)
+          (k_linear): Linear(in_features=256, out_features=256, bias=True)
+          (v_linear): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=256, out_features=256, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=256, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=256, bias=True)
+        )
+      )
+    )
+    (norm): Norm()
+  )
+  (out): Linear(in_features=256, out_features=8376, bias=True)
+)
+[Sat, 17 May 2025 09:48:21 INFO] Encoder: 7688960
+[Sat, 17 May 2025 09:48:21 INFO] Decoder: 8459776
+[Sat, 17 May 2025 09:48:21 INFO] * Number of parameters: 16148736
+[Sat, 17 May 2025 09:48:21 INFO] Starting training on cuda
+[Sat, 17 May 2025 09:48:36 INFO] epoch: 000 - iter: 00200 - train loss: 2.0065 - time elapsed/per batch: 14.6809 0.0734
+[Sat, 17 May 2025 09:48:51 INFO] epoch: 000 - iter: 00400 - train loss: 1.9210 - time elapsed/per batch: 15.3790 0.0769
+[Sat, 17 May 2025 09:49:16 INFO] epoch: 000 - iter: 00600 - train loss: 1.7117 - time elapsed/per batch: 25.1015 0.1255
+[Sat, 17 May 2025 09:49:37 INFO] epoch: 000 - iter: 00800 - train loss: 1.6671 - time elapsed/per batch: 21.0356 0.1052
+[Sat, 17 May 2025 09:50:00 INFO] epoch: 000 - iter: 01000 - train loss: 1.6543 - time elapsed/per batch: 22.7492 0.1137
+[Sat, 17 May 2025 09:50:15 INFO] epoch: 000 - iter: 01200 - train loss: 1.5914 - time elapsed/per batch: 15.3576 0.0768
+[Sat, 17 May 2025 09:50:34 INFO] epoch: 000 - iter: 01400 - train loss: 1.5901 - time elapsed/per batch: 19.0948 0.0955
+[Sat, 17 May 2025 09:50:54 INFO] epoch: 000 - iter: 01600 - train loss: 1.5288 - time elapsed/per batch: 19.6190 0.0981
+[Sat, 17 May 2025 09:51:14 INFO] epoch: 000 - iter: 01800 - train loss: 1.5144 - time elapsed/per batch: 20.1113 0.1006
+[Sat, 17 May 2025 09:51:34 INFO] epoch: 000 - iter: 02000 - train loss: 1.4329 - time elapsed/per batch: 19.4705 0.0974
+[Sat, 17 May 2025 09:51:54 INFO] epoch: 000 - iter: 02200 - train loss: 1.4673 - time elapsed/per batch: 19.9855 0.0999
+[Sat, 17 May 2025 09:52:09 INFO] epoch: 000 - iter: 02400 - train loss: 1.3925 - time elapsed/per batch: 15.4306 0.0772
+[Sat, 17 May 2025 09:52:29 INFO] epoch: 000 - iter: 02600 - train loss: 1.3284 - time elapsed/per batch: 19.7707 0.0989
+[Sat, 17 May 2025 09:52:51 INFO] epoch: 000 - iter: 02800 - train loss: 1.3394 - time elapsed/per batch: 22.2595 0.1113
+[Sat, 17 May 2025 09:53:22 INFO] epoch: 000 - iter: 03000 - train loss: 1.3276 - time elapsed/per batch: 31.3342 0.1567
+[Sat, 17 May 2025 09:54:44 INFO] epoch: 000 - iter: 03124 - valid loss: 4.8654 - bleu score: 0.0074 - full evaluation time: 69.7556
+[Sat, 17 May 2025 09:55:23 INFO] epoch: 001 - iter: 00200 - train loss: 1.2770 - time elapsed/per batch: 39.4899 0.1974
+[Sat, 17 May 2025 09:55:59 INFO] epoch: 001 - iter: 00400 - train loss: 1.2658 - time elapsed/per batch: 35.9934 0.1800
+[Sat, 17 May 2025 09:56:38 INFO] epoch: 001 - iter: 00600 - train loss: 1.2577 - time elapsed/per batch: 38.9712 0.1949
+[Sat, 17 May 2025 09:57:02 INFO] epoch: 001 - iter: 00800 - train loss: 1.2350 - time elapsed/per batch: 23.5608 0.1178
+[Sat, 17 May 2025 09:57:30 INFO] epoch: 001 - iter: 01000 - train loss: 1.2457 - time elapsed/per batch: 28.4216 0.1421
+[Sat, 17 May 2025 09:58:03 INFO] epoch: 001 - iter: 01200 - train loss: 1.2091 - time elapsed/per batch: 32.5376 0.1627
+[Sat, 17 May 2025 09:58:30 INFO] epoch: 001 - iter: 01400 - train loss: 1.2275 - time elapsed/per batch: 27.6700 0.1383
+[Sat, 17 May 2025 09:59:00 INFO] epoch: 001 - iter: 01600 - train loss: 1.1672 - time elapsed/per batch: 30.2300 0.1512
+[Sat, 17 May 2025 09:59:32 INFO] epoch: 001 - iter: 01800 - train loss: 1.1924 - time elapsed/per batch: 31.2968 0.1565
+[Sat, 17 May 2025 09:59:54 INFO] epoch: 001 - iter: 02000 - train loss: 1.1802 - time elapsed/per batch: 22.6067 0.1130
+[Sat, 17 May 2025 10:00:20 INFO] epoch: 001 - iter: 02200 - train loss: 1.1971 - time elapsed/per batch: 25.6436 0.1282
+[Sat, 17 May 2025 10:00:45 INFO] epoch: 001 - iter: 02400 - train loss: 1.1573 - time elapsed/per batch: 25.1632 0.1258
+[Sat, 17 May 2025 10:01:02 INFO] epoch: 001 - iter: 02600 - train loss: 1.1228 - time elapsed/per batch: 16.5586 0.0828
+[Sat, 17 May 2025 10:01:16 INFO] epoch: 001 - iter: 02800 - train loss: 1.1195 - time elapsed/per batch: 14.2045 0.0710
+[Sat, 17 May 2025 10:01:30 INFO] epoch: 001 - iter: 03000 - train loss: 1.1517 - time elapsed/per batch: 13.8767 0.0694
+[Sat, 17 May 2025 10:02:53 INFO] epoch: 001 - iter: 03124 - valid loss: 4.2178 - bleu score: 0.0250 - full evaluation time: 63.9649
+[Sat, 17 May 2025 10:03:27 INFO] epoch: 002 - iter: 00200 - train loss: 1.1051 - time elapsed/per batch: 33.4312 0.1672
+[Sat, 17 May 2025 10:03:59 INFO] epoch: 002 - iter: 00400 - train loss: 1.1745 - time elapsed/per batch: 32.4158 0.1621
+[Sat, 17 May 2025 10:04:21 INFO] epoch: 002 - iter: 00600 - train loss: 1.1475 - time elapsed/per batch: 21.5579 0.1078
+[Sat, 17 May 2025 10:04:38 INFO] epoch: 002 - iter: 00800 - train loss: 1.0946 - time elapsed/per batch: 16.9751 0.0849
+[Sat, 17 May 2025 10:04:52 INFO] epoch: 002 - iter: 01000 - train loss: 1.1197 - time elapsed/per batch: 14.3122 0.0716
+[Sat, 17 May 2025 10:05:11 INFO] epoch: 002 - iter: 01200 - train loss: 1.0945 - time elapsed/per batch: 19.1485 0.0957
+[Sat, 17 May 2025 10:05:29 INFO] epoch: 002 - iter: 01400 - train loss: 1.0682 - time elapsed/per batch: 17.9870 0.0899
+[Sat, 17 May 2025 10:05:46 INFO] epoch: 002 - iter: 01600 - train loss: 1.0932 - time elapsed/per batch: 17.2458 0.0862
+[Sat, 17 May 2025 10:06:19 INFO] epoch: 002 - iter: 01800 - train loss: 1.0918 - time elapsed/per batch: 32.2317 0.1612
+[Sat, 17 May 2025 10:06:40 INFO] epoch: 002 - iter: 02000 - train loss: 1.0554 - time elapsed/per batch: 21.7582 0.1088
+[Sat, 17 May 2025 10:07:00 INFO] epoch: 002 - iter: 02200 - train loss: 1.1182 - time elapsed/per batch: 19.8809 0.0994
+[Sat, 17 May 2025 10:07:21 INFO] epoch: 002 - iter: 02400 - train loss: 1.0659 - time elapsed/per batch: 20.5958 0.1030
+[Sat, 17 May 2025 10:10:26 INFO] epoch: 002 - iter: 02600 - train loss: 1.0617 - time elapsed/per batch: 22.9595 0.1148
+[Sat, 17 May 2025 10:10:49 INFO] epoch: 002 - iter: 02800 - train loss: 1.0806 - time elapsed/per batch: 22.9940 0.1150
+[Sat, 17 May 2025 10:11:04 INFO] epoch: 002 - iter: 03000 - train loss: 1.0994 - time elapsed/per batch: 14.4281 0.0721
+[Sat, 17 May 2025 10:11:42 INFO] epoch: 002 - iter: 03124 - valid loss: 3.9192 - bleu score: 0.0382 - full evaluation time: 29.9425
+[Sat, 17 May 2025 10:11:56 INFO] epoch: 003 - iter: 00200 - train loss: 1.0601 - time elapsed/per batch: 13.8675 0.0693
+[Sat, 17 May 2025 10:12:10 INFO] epoch: 003 - iter: 00400 - train loss: 1.0331 - time elapsed/per batch: 14.0265 0.0701
+[Sat, 17 May 2025 10:12:24 INFO] epoch: 003 - iter: 00600 - train loss: 1.0570 - time elapsed/per batch: 13.8970 0.0695
+[Sat, 17 May 2025 10:12:39 INFO] epoch: 003 - iter: 00800 - train loss: 0.9929 - time elapsed/per batch: 14.6785 0.0734
+[Sat, 17 May 2025 10:12:53 INFO] epoch: 003 - iter: 01000 - train loss: 1.0182 - time elapsed/per batch: 14.5245 0.0726
+[Sat, 17 May 2025 10:13:07 INFO] epoch: 003 - iter: 01200 - train loss: 1.0628 - time elapsed/per batch: 14.1255 0.0706
+[Sat, 17 May 2025 10:13:22 INFO] epoch: 003 - iter: 01400 - train loss: 1.0420 - time elapsed/per batch: 14.2300 0.0712
+[Sat, 17 May 2025 10:13:36 INFO] epoch: 003 - iter: 01600 - train loss: 1.0109 - time elapsed/per batch: 14.3870 0.0719
+[Sat, 17 May 2025 10:13:50 INFO] epoch: 003 - iter: 01800 - train loss: 1.0489 - time elapsed/per batch: 14.1330 0.0707
+[Sat, 17 May 2025 10:14:05 INFO] epoch: 003 - iter: 02000 - train loss: 1.0256 - time elapsed/per batch: 14.4635 0.0723
+[Sat, 17 May 2025 10:14:19 INFO] epoch: 003 - iter: 02200 - train loss: 1.0561 - time elapsed/per batch: 14.2040 0.0710
+[Sat, 17 May 2025 10:14:33 INFO] epoch: 003 - iter: 02400 - train loss: 1.0247 - time elapsed/per batch: 13.7480 0.0687
+[Sat, 17 May 2025 10:14:46 INFO] epoch: 003 - iter: 02600 - train loss: 1.0491 - time elapsed/per batch: 13.6370 0.0682
+[Sat, 17 May 2025 10:15:01 INFO] epoch: 003 - iter: 02800 - train loss: 1.0152 - time elapsed/per batch: 14.3535 0.0718
+[Sat, 17 May 2025 10:15:15 INFO] epoch: 003 - iter: 03000 - train loss: 1.0516 - time elapsed/per batch: 14.0940 0.0705
+[Sat, 17 May 2025 10:15:55 INFO] epoch: 003 - iter: 03124 - valid loss: 3.7190 - bleu score: 0.0588 - full evaluation time: 32.2405
+[Sat, 17 May 2025 10:16:10 INFO] epoch: 004 - iter: 00200 - train loss: 0.9925 - time elapsed/per batch: 14.4430 0.0722
+[Sat, 17 May 2025 10:16:24 INFO] epoch: 004 - iter: 00400 - train loss: 1.0063 - time elapsed/per batch: 14.0750 0.0704
+[Sat, 17 May 2025 10:16:38 INFO] epoch: 004 - iter: 00600 - train loss: 0.9933 - time elapsed/per batch: 14.1210 0.0706
+[Sat, 17 May 2025 10:16:52 INFO] epoch: 004 - iter: 00800 - train loss: 1.0098 - time elapsed/per batch: 13.6985 0.0685
+[Sat, 17 May 2025 10:17:06 INFO] epoch: 004 - iter: 01000 - train loss: 1.0170 - time elapsed/per batch: 13.9225 0.0696
+[Sat, 17 May 2025 10:17:20 INFO] epoch: 004 - iter: 01200 - train loss: 0.9960 - time elapsed/per batch: 14.4325 0.0722
+[Sat, 17 May 2025 10:17:34 INFO] epoch: 004 - iter: 01400 - train loss: 1.0022 - time elapsed/per batch: 13.6135 0.0681
+[Sat, 17 May 2025 10:17:48 INFO] epoch: 004 - iter: 01600 - train loss: 0.9971 - time elapsed/per batch: 14.1795 0.0709
+[Sat, 17 May 2025 10:18:02 INFO] epoch: 004 - iter: 01800 - train loss: 0.9790 - time elapsed/per batch: 14.4665 0.0723
+[Sat, 17 May 2025 10:18:17 INFO] epoch: 004 - iter: 02000 - train loss: 0.9776 - time elapsed/per batch: 14.4845 0.0724
+[Sat, 17 May 2025 10:18:32 INFO] epoch: 004 - iter: 02200 - train loss: 0.9520 - time elapsed/per batch: 14.8715 0.0744
+[Sat, 17 May 2025 10:18:46 INFO] epoch: 004 - iter: 02400 - train loss: 0.9683 - time elapsed/per batch: 14.4565 0.0723
+[Sat, 17 May 2025 10:19:01 INFO] epoch: 004 - iter: 02600 - train loss: 0.9986 - time elapsed/per batch: 14.5631 0.0728
+[Sat, 17 May 2025 10:19:15 INFO] epoch: 004 - iter: 02800 - train loss: 0.9800 - time elapsed/per batch: 14.3540 0.0718
+[Sat, 17 May 2025 10:19:30 INFO] epoch: 004 - iter: 03000 - train loss: 0.9562 - time elapsed/per batch: 14.5145 0.0726
+[Sat, 17 May 2025 10:20:08 INFO] epoch: 004 - iter: 03124 - valid loss: 3.5852 - bleu score: 0.0789 - full evaluation time: 29.7680
+[Sat, 17 May 2025 10:20:22 INFO] epoch: 005 - iter: 00200 - train loss: 0.9693 - time elapsed/per batch: 14.1055 0.0705
+[Sat, 17 May 2025 10:20:37 INFO] epoch: 005 - iter: 00400 - train loss: 0.9520 - time elapsed/per batch: 14.6580 0.0733
+[Sat, 17 May 2025 10:20:50 INFO] epoch: 005 - iter: 00600 - train loss: 0.9596 - time elapsed/per batch: 13.8610 0.0693
+[Sat, 17 May 2025 10:21:05 INFO] epoch: 005 - iter: 00800 - train loss: 0.9679 - time elapsed/per batch: 14.1460 0.0707
+[Sat, 17 May 2025 10:21:19 INFO] epoch: 005 - iter: 01000 - train loss: 0.9372 - time elapsed/per batch: 14.5485 0.0727
+[Sat, 17 May 2025 10:21:33 INFO] epoch: 005 - iter: 01200 - train loss: 0.9798 - time elapsed/per batch: 13.9530 0.0698
+[Sat, 17 May 2025 10:21:47 INFO] epoch: 005 - iter: 01400 - train loss: 0.9981 - time elapsed/per batch: 13.6180 0.0681
+[Sat, 17 May 2025 10:22:01 INFO] epoch: 005 - iter: 01600 - train loss: 0.9601 - time elapsed/per batch: 14.4685 0.0723
+[Sat, 17 May 2025 10:22:16 INFO] epoch: 005 - iter: 01800 - train loss: 0.9561 - time elapsed/per batch: 14.4850 0.0724
+[Sat, 17 May 2025 10:22:30 INFO] epoch: 005 - iter: 02000 - train loss: 0.9472 - time elapsed/per batch: 14.6050 0.0730
+[Sat, 17 May 2025 10:22:45 INFO] epoch: 005 - iter: 02200 - train loss: 0.9250 - time elapsed/per batch: 14.2027 0.0710
+[Sat, 17 May 2025 10:22:58 INFO] epoch: 005 - iter: 02400 - train loss: 0.9628 - time elapsed/per batch: 13.9696 0.0698
+[Sat, 17 May 2025 10:23:13 INFO] epoch: 005 - iter: 02600 - train loss: 0.9737 - time elapsed/per batch: 14.0689 0.0703
+[Sat, 17 May 2025 10:23:27 INFO] epoch: 005 - iter: 02800 - train loss: 0.9373 - time elapsed/per batch: 14.7223 0.0736
+[Sat, 17 May 2025 10:23:41 INFO] epoch: 005 - iter: 03000 - train loss: 0.9490 - time elapsed/per batch: 14.0173 0.0701
+[Sat, 17 May 2025 10:24:22 INFO] epoch: 005 - iter: 03124 - valid loss: 3.4913 - bleu score: 0.0945 - full evaluation time: 32.0005
+[Sat, 17 May 2025 10:24:37 INFO] epoch: 006 - iter: 00200 - train loss: 0.9391 - time elapsed/per batch: 14.5870 0.0729
+[Sat, 17 May 2025 10:24:51 INFO] epoch: 006 - iter: 00400 - train loss: 0.9263 - time elapsed/per batch: 14.4655 0.0723
+[Sat, 17 May 2025 10:25:05 INFO] epoch: 006 - iter: 00600 - train loss: 0.9438 - time elapsed/per batch: 14.1515 0.0708
+[Sat, 17 May 2025 10:25:19 INFO] epoch: 006 - iter: 00800 - train loss: 0.9481 - time elapsed/per batch: 13.8384 0.0692
+[Sat, 17 May 2025 10:25:34 INFO] epoch: 006 - iter: 01000 - train loss: 0.9269 - time elapsed/per batch: 14.5830 0.0729
+[Sat, 17 May 2025 10:25:49 INFO] epoch: 006 - iter: 01200 - train loss: 0.9207 - time elapsed/per batch: 14.6365 0.0732
+[Sat, 17 May 2025 10:26:03 INFO] epoch: 006 - iter: 01400 - train loss: 0.9176 - time elapsed/per batch: 14.4555 0.0723
+[Sat, 17 May 2025 10:26:17 INFO] epoch: 006 - iter: 01600 - train loss: 0.9311 - time elapsed/per batch: 13.8650 0.0693
+[Sat, 17 May 2025 10:26:31 INFO] epoch: 006 - iter: 01800 - train loss: 0.9044 - time elapsed/per batch: 14.1086 0.0705
+[Sat, 17 May 2025 10:26:45 INFO] epoch: 006 - iter: 02000 - train loss: 0.9318 - time elapsed/per batch: 14.0707 0.0704
+[Sat, 17 May 2025 10:26:59 INFO] epoch: 006 - iter: 02200 - train loss: 0.9519 - time elapsed/per batch: 13.8498 0.0692
+[Sat, 17 May 2025 10:27:13 INFO] epoch: 006 - iter: 02400 - train loss: 0.9352 - time elapsed/per batch: 14.0242 0.0701
+[Sat, 17 May 2025 10:27:27 INFO] epoch: 006 - iter: 02600 - train loss: 0.9124 - time elapsed/per batch: 14.4458 0.0722
+[Sat, 17 May 2025 10:27:41 INFO] epoch: 006 - iter: 02800 - train loss: 0.9524 - time elapsed/per batch: 13.9043 0.0695
+[Sat, 17 May 2025 10:27:58 INFO] epoch: 006 - iter: 03000 - train loss: 0.9203 - time elapsed/per batch: 17.1352 0.0857
+[Sat, 17 May 2025 10:28:44 INFO] epoch: 006 - iter: 03124 - valid loss: 3.4182 - bleu score: 0.1095 - full evaluation time: 34.3384
+[Sat, 17 May 2025 10:28:58 INFO] epoch: 007 - iter: 00200 - train loss: 0.8926 - time elapsed/per batch: 14.1110 0.0706
+[Sat, 17 May 2025 10:29:13 INFO] epoch: 007 - iter: 00400 - train loss: 0.9108 - time elapsed/per batch: 15.1306 0.0757
+[Sat, 17 May 2025 10:29:27 INFO] epoch: 007 - iter: 00600 - train loss: 0.9182 - time elapsed/per batch: 13.9110 0.0696
+[Sat, 17 May 2025 10:29:47 INFO] epoch: 007 - iter: 00800 - train loss: 0.9102 - time elapsed/per batch: 19.4110 0.0971
+[Sat, 17 May 2025 10:30:04 INFO] epoch: 007 - iter: 01000 - train loss: 0.9217 - time elapsed/per batch: 17.0871 0.0854
+[Sat, 17 May 2025 10:30:25 INFO] epoch: 007 - iter: 01200 - train loss: 0.8588 - time elapsed/per batch: 21.4780 0.1074
+[Sat, 17 May 2025 10:31:36 INFO] epoch: 007 - iter: 01400 - train loss: 0.9205 - time elapsed/per batch: 70.7081 0.3535
+[Sat, 17 May 2025 10:32:17 INFO] epoch: 007 - iter: 01600 - train loss: 0.9265 - time elapsed/per batch: 40.4623 0.2023
+[Sat, 17 May 2025 10:32:34 INFO] epoch: 007 - iter: 01800 - train loss: 0.9148 - time elapsed/per batch: 17.3384 0.0867
+[Sat, 17 May 2025 10:34:32 INFO] epoch: 007 - iter: 02000 - train loss: 0.9071 - time elapsed/per batch: 117.9952 0.5900
+[Sat, 17 May 2025 10:36:44 INFO] epoch: 007 - iter: 02200 - train loss: 0.9057 - time elapsed/per batch: 132.5446 0.6627
+[Sat, 17 May 2025 10:36:59 INFO] epoch: 007 - iter: 02400 - train loss: 0.9242 - time elapsed/per batch: 14.8660 0.0743
+[Sat, 17 May 2025 10:37:14 INFO] epoch: 007 - iter: 02600 - train loss: 0.9095 - time elapsed/per batch: 14.8909 0.0745
+[Sat, 17 May 2025 10:37:29 INFO] epoch: 007 - iter: 02800 - train loss: 0.9202 - time elapsed/per batch: 14.6903 0.0735
+[Sat, 17 May 2025 10:37:44 INFO] epoch: 007 - iter: 03000 - train loss: 0.8772 - time elapsed/per batch: 14.9846 0.0749
+[Sat, 17 May 2025 10:38:56 INFO] epoch: 007 - iter: 03124 - valid loss: 3.3416 - bleu score: 0.1170 - full evaluation time: 58.1029
+[Sat, 17 May 2025 10:39:18 INFO] epoch: 008 - iter: 00200 - train loss: 0.8729 - time elapsed/per batch: 22.5673 0.1128
+[Sat, 17 May 2025 10:39:40 INFO] epoch: 008 - iter: 00400 - train loss: 0.8976 - time elapsed/per batch: 22.1774 0.1109
+[Sat, 17 May 2025 10:40:01 INFO] epoch: 008 - iter: 00600 - train loss: 0.8580 - time elapsed/per batch: 20.4024 0.1020
+[Sat, 17 May 2025 10:40:22 INFO] epoch: 008 - iter: 00800 - train loss: 0.8953 - time elapsed/per batch: 21.4395 0.1072
+[Sat, 17 May 2025 10:40:39 INFO] epoch: 008 - iter: 01000 - train loss: 0.9153 - time elapsed/per batch: 17.2355 0.0862
+[Sat, 17 May 2025 10:40:57 INFO] epoch: 008 - iter: 01200 - train loss: 0.9188 - time elapsed/per batch: 17.7817 0.0889
+[Sat, 17 May 2025 10:41:19 INFO] epoch: 008 - iter: 01400 - train loss: 0.8999 - time elapsed/per batch: 22.3020 0.1115
+[Sat, 17 May 2025 10:41:40 INFO] epoch: 008 - iter: 01600 - train loss: 0.8708 - time elapsed/per batch: 20.1169 0.1006
+[Sat, 17 May 2025 10:41:55 INFO] epoch: 008 - iter: 01800 - train loss: 0.9093 - time elapsed/per batch: 14.9467 0.0747
+[Sat, 17 May 2025 10:42:11 INFO] epoch: 008 - iter: 02000 - train loss: 0.8997 - time elapsed/per batch: 16.5373 0.0827
+[Sat, 17 May 2025 10:42:31 INFO] epoch: 008 - iter: 02200 - train loss: 0.9261 - time elapsed/per batch: 20.0553 0.1003
+[Sat, 17 May 2025 10:42:52 INFO] epoch: 008 - iter: 02400 - train loss: 0.8688 - time elapsed/per batch: 20.3908 0.1020
+[Sat, 17 May 2025 10:43:11 INFO] epoch: 008 - iter: 02600 - train loss: 0.8713 - time elapsed/per batch: 19.6116 0.0981
+[Sat, 17 May 2025 10:43:29 INFO] epoch: 008 - iter: 02800 - train loss: 0.8878 - time elapsed/per batch: 17.9852 0.0899
+[Sat, 17 May 2025 10:43:47 INFO] epoch: 008 - iter: 03000 - train loss: 0.8750 - time elapsed/per batch: 18.0995 0.0905
+[Sat, 17 May 2025 10:44:41 INFO] epoch: 008 - iter: 03124 - valid loss: 3.2826 - bleu score: 0.1222 - full evaluation time: 42.5728
+[Sat, 17 May 2025 10:44:59 INFO] epoch: 009 - iter: 00200 - train loss: 0.8571 - time elapsed/per batch: 18.3385 0.0917
+[Sat, 17 May 2025 10:45:17 INFO] epoch: 009 - iter: 00400 - train loss: 0.8800 - time elapsed/per batch: 17.7087 0.0885
+[Sat, 17 May 2025 10:45:37 INFO] epoch: 009 - iter: 00600 - train loss: 0.8860 - time elapsed/per batch: 20.0787 0.1004
+[Sat, 17 May 2025 10:45:56 INFO] epoch: 009 - iter: 00800 - train loss: 0.8820 - time elapsed/per batch: 18.6531 0.0933
+[Sat, 17 May 2025 10:46:14 INFO] epoch: 009 - iter: 01000 - train loss: 0.9174 - time elapsed/per batch: 18.6039 0.0930
+[Sat, 17 May 2025 10:46:35 INFO] epoch: 009 - iter: 01200 - train loss: 0.8715 - time elapsed/per batch: 20.6934 0.1035
+[Sat, 17 May 2025 10:46:53 INFO] epoch: 009 - iter: 01400 - train loss: 0.8628 - time elapsed/per batch: 18.3693 0.0918
+[Sat, 17 May 2025 10:47:11 INFO] epoch: 009 - iter: 01600 - train loss: 0.8721 - time elapsed/per batch: 17.9889 0.0899
+[Sat, 17 May 2025 10:47:29 INFO] epoch: 009 - iter: 01800 - train loss: 0.8653 - time elapsed/per batch: 17.6083 0.0880
+[Sat, 17 May 2025 10:47:47 INFO] epoch: 009 - iter: 02000 - train loss: 0.8577 - time elapsed/per batch: 17.5180 0.0876
+[Sat, 17 May 2025 10:48:05 INFO] epoch: 009 - iter: 02200 - train loss: 0.8562 - time elapsed/per batch: 18.1485 0.0907
+[Sat, 17 May 2025 10:48:23 INFO] epoch: 009 - iter: 02400 - train loss: 0.8691 - time elapsed/per batch: 18.1250 0.0906
+[Sat, 17 May 2025 10:48:38 INFO] epoch: 009 - iter: 02600 - train loss: 0.8645 - time elapsed/per batch: 15.3612 0.0768
+[Sat, 17 May 2025 10:48:54 INFO] epoch: 009 - iter: 02800 - train loss: 0.8754 - time elapsed/per batch: 15.4297 0.0771
+[Sat, 17 May 2025 10:49:09 INFO] epoch: 009 - iter: 03000 - train loss: 0.8659 - time elapsed/per batch: 15.1924 0.0760
+[Sat, 17 May 2025 10:49:48 INFO] epoch: 009 - iter: 03124 - valid loss: 3.2483 - bleu score: 0.1348 - full evaluation time: 29.1323
+[Sat, 17 May 2025 10:50:03 INFO] epoch: 010 - iter: 00200 - train loss: 0.8602 - time elapsed/per batch: 14.9783 0.0749
+[Sat, 17 May 2025 10:50:18 INFO] epoch: 010 - iter: 00400 - train loss: 0.8618 - time elapsed/per batch: 15.4830 0.0774
+[Sat, 17 May 2025 10:50:34 INFO] epoch: 010 - iter: 00600 - train loss: 0.8353 - time elapsed/per batch: 16.0896 0.0804
+[Sat, 17 May 2025 10:50:49 INFO] epoch: 010 - iter: 00800 - train loss: 0.8644 - time elapsed/per batch: 15.3865 0.0769
+[Sat, 17 May 2025 10:51:05 INFO] epoch: 010 - iter: 01000 - train loss: 0.8884 - time elapsed/per batch: 15.0725 0.0754
+[Sat, 17 May 2025 10:51:20 INFO] epoch: 010 - iter: 01200 - train loss: 0.8326 - time elapsed/per batch: 15.3730 0.0769
+[Sat, 17 May 2025 10:51:35 INFO] epoch: 010 - iter: 01400 - train loss: 0.8523 - time elapsed/per batch: 15.5175 0.0776
+[Sat, 17 May 2025 10:51:50 INFO] epoch: 010 - iter: 01600 - train loss: 0.8718 - time elapsed/per batch: 14.8675 0.0743
+[Sat, 17 May 2025 10:52:06 INFO] epoch: 010 - iter: 01800 - train loss: 0.8364 - time elapsed/per batch: 15.4370 0.0772
+[Sat, 17 May 2025 10:52:21 INFO] epoch: 010 - iter: 02000 - train loss: 0.8686 - time elapsed/per batch: 15.2240 0.0761
+[Sat, 17 May 2025 10:52:36 INFO] epoch: 010 - iter: 02200 - train loss: 0.8380 - time elapsed/per batch: 15.1240 0.0756
+[Sat, 17 May 2025 10:52:51 INFO] epoch: 010 - iter: 02400 - train loss: 0.8510 - time elapsed/per batch: 15.2330 0.0762
+[Sat, 17 May 2025 10:53:07 INFO] epoch: 010 - iter: 02600 - train loss: 0.8454 - time elapsed/per batch: 15.2105 0.0761
+[Sat, 17 May 2025 10:53:21 INFO] epoch: 010 - iter: 02800 - train loss: 0.8696 - time elapsed/per batch: 14.6450 0.0732
+[Sat, 17 May 2025 10:53:37 INFO] epoch: 010 - iter: 03000 - train loss: 0.8563 - time elapsed/per batch: 15.3825 0.0769
+[Sat, 17 May 2025 10:54:16 INFO] epoch: 010 - iter: 03124 - valid loss: 3.2024 - bleu score: 0.1433 - full evaluation time: 29.7025
+[Sat, 17 May 2025 10:54:31 INFO] epoch: 011 - iter: 00200 - train loss: 0.8232 - time elapsed/per batch: 15.3505 0.0768
+[Sat, 17 May 2025 10:54:46 INFO] epoch: 011 - iter: 00400 - train loss: 0.8407 - time elapsed/per batch: 15.0285 0.0751
+[Sat, 17 May 2025 10:55:01 INFO] epoch: 011 - iter: 00600 - train loss: 0.8424 - time elapsed/per batch: 15.3740 0.0769
+[Sat, 17 May 2025 10:55:17 INFO] epoch: 011 - iter: 00800 - train loss: 0.8424 - time elapsed/per batch: 15.2215 0.0761
+[Sat, 17 May 2025 10:55:31 INFO] epoch: 011 - iter: 01000 - train loss: 0.8649 - time elapsed/per batch: 14.8415 0.0742
+[Sat, 17 May 2025 10:55:47 INFO] epoch: 011 - iter: 01200 - train loss: 0.8522 - time elapsed/per batch: 15.5715 0.0779
+[Sat, 17 May 2025 10:56:02 INFO] epoch: 011 - iter: 01400 - train loss: 0.8684 - time elapsed/per batch: 14.8565 0.0743
+[Sat, 17 May 2025 10:56:17 INFO] epoch: 011 - iter: 01600 - train loss: 0.8319 - time elapsed/per batch: 15.1398 0.0757
+[Sat, 17 May 2025 10:56:33 INFO] epoch: 011 - iter: 01800 - train loss: 0.8196 - time elapsed/per batch: 15.7040 0.0785
+[Sat, 17 May 2025 10:56:48 INFO] epoch: 011 - iter: 02000 - train loss: 0.8454 - time elapsed/per batch: 15.1870 0.0759
+[Sat, 17 May 2025 10:57:03 INFO] epoch: 011 - iter: 02200 - train loss: 0.8550 - time elapsed/per batch: 15.0470 0.0752
+[Sat, 17 May 2025 10:57:18 INFO] epoch: 011 - iter: 02400 - train loss: 0.8374 - time elapsed/per batch: 15.2130 0.0761
+[Sat, 17 May 2025 10:57:34 INFO] epoch: 011 - iter: 02600 - train loss: 0.8322 - time elapsed/per batch: 15.6260 0.0781
+[Sat, 17 May 2025 10:57:49 INFO] epoch: 011 - iter: 02800 - train loss: 0.8441 - time elapsed/per batch: 14.8690 0.0743
+[Sat, 17 May 2025 10:58:03 INFO] epoch: 011 - iter: 03000 - train loss: 0.8564 - time elapsed/per batch: 14.6060 0.0730
+[Sat, 17 May 2025 10:58:44 INFO] epoch: 011 - iter: 03124 - valid loss: 3.1665 - bleu score: 0.1542 - full evaluation time: 30.8370
+[Sat, 17 May 2025 10:58:59 INFO] epoch: 012 - iter: 00200 - train loss: 0.8354 - time elapsed/per batch: 15.3010 0.0765
+[Sat, 17 May 2025 10:59:14 INFO] epoch: 012 - iter: 00400 - train loss: 0.8165 - time elapsed/per batch: 15.2445 0.0762
+[Sat, 17 May 2025 10:59:29 INFO] epoch: 012 - iter: 00600 - train loss: 0.8591 - time elapsed/per batch: 14.6525 0.0733
+[Sat, 17 May 2025 10:59:44 INFO] epoch: 012 - iter: 00800 - train loss: 0.8311 - time elapsed/per batch: 15.3275 0.0766
+[Sat, 17 May 2025 10:59:59 INFO] epoch: 012 - iter: 01000 - train loss: 0.8294 - time elapsed/per batch: 15.0490 0.0752
+[Sat, 17 May 2025 11:00:15 INFO] epoch: 012 - iter: 01200 - train loss: 0.8238 - time elapsed/per batch: 15.3780 0.0769
+[Sat, 17 May 2025 11:00:29 INFO] epoch: 012 - iter: 01400 - train loss: 0.8387 - time elapsed/per batch: 14.8080 0.0740
+[Sat, 17 May 2025 11:00:44 INFO] epoch: 012 - iter: 01600 - train loss: 0.8340 - time elapsed/per batch: 14.8770 0.0744
+[Sat, 17 May 2025 11:01:00 INFO] epoch: 012 - iter: 01800 - train loss: 0.8311 - time elapsed/per batch: 15.3504 0.0768
+[Sat, 17 May 2025 11:01:15 INFO] epoch: 012 - iter: 02000 - train loss: 0.8425 - time elapsed/per batch: 14.9245 0.0746
+[Sat, 17 May 2025 11:01:30 INFO] epoch: 012 - iter: 02200 - train loss: 0.8370 - time elapsed/per batch: 15.5585 0.0778
+[Sat, 17 May 2025 11:01:46 INFO] epoch: 012 - iter: 02400 - train loss: 0.8198 - time elapsed/per batch: 15.5388 0.0777
+[Sat, 17 May 2025 11:02:02 INFO] epoch: 012 - iter: 02600 - train loss: 0.8241 - time elapsed/per batch: 15.9165 0.0796
+[Sat, 17 May 2025 11:02:17 INFO] epoch: 012 - iter: 02800 - train loss: 0.8364 - time elapsed/per batch: 15.1216 0.0756
+[Sat, 17 May 2025 11:02:32 INFO] epoch: 012 - iter: 03000 - train loss: 0.8366 - time elapsed/per batch: 15.0144 0.0751
+[Sat, 17 May 2025 11:03:11 INFO] epoch: 012 - iter: 03124 - valid loss: 3.1387 - bleu score: 0.1637 - full evaluation time: 29.3658
+[Sat, 17 May 2025 11:03:26 INFO] epoch: 013 - iter: 00200 - train loss: 0.8028 - time elapsed/per batch: 15.4208 0.0771
+[Sat, 17 May 2025 11:03:42 INFO] epoch: 013 - iter: 00400 - train loss: 0.7999 - time elapsed/per batch: 15.6463 0.0782
+[Sat, 17 May 2025 11:03:56 INFO] epoch: 013 - iter: 00600 - train loss: 0.8395 - time elapsed/per batch: 14.6646 0.0733
+[Sat, 17 May 2025 11:04:11 INFO] epoch: 013 - iter: 00800 - train loss: 0.8361 - time elapsed/per batch: 15.1238 0.0756
+[Sat, 17 May 2025 11:04:26 INFO] epoch: 013 - iter: 01000 - train loss: 0.8350 - time elapsed/per batch: 15.0290 0.0751
+[Sat, 17 May 2025 11:04:42 INFO] epoch: 013 - iter: 01200 - train loss: 0.8260 - time elapsed/per batch: 15.8005 0.0790
+[Sat, 17 May 2025 11:04:58 INFO] epoch: 013 - iter: 01400 - train loss: 0.8168 - time elapsed/per batch: 15.2714 0.0764
+[Sat, 17 May 2025 11:05:13 INFO] epoch: 013 - iter: 01600 - train loss: 0.8367 - time elapsed/per batch: 15.2324 0.0762
+[Sat, 17 May 2025 11:05:28 INFO] epoch: 013 - iter: 01800 - train loss: 0.8148 - time elapsed/per batch: 15.5117 0.0776
+[Sat, 17 May 2025 11:05:44 INFO] epoch: 013 - iter: 02000 - train loss: 0.8287 - time elapsed/per batch: 15.2436 0.0762
+[Sat, 17 May 2025 11:05:59 INFO] epoch: 013 - iter: 02200 - train loss: 0.8373 - time elapsed/per batch: 15.2054 0.0760
+[Sat, 17 May 2025 11:06:13 INFO] epoch: 013 - iter: 02400 - train loss: 0.8515 - time elapsed/per batch: 14.4950 0.0725
+[Sat, 17 May 2025 11:06:29 INFO] epoch: 013 - iter: 02600 - train loss: 0.8076 - time elapsed/per batch: 15.3001 0.0765
+[Sat, 17 May 2025 11:06:44 INFO] epoch: 013 - iter: 02800 - train loss: 0.8295 - time elapsed/per batch: 15.1892 0.0759
+[Sat, 17 May 2025 11:06:59 INFO] epoch: 013 - iter: 03000 - train loss: 0.8430 - time elapsed/per batch: 14.9571 0.0748
+[Sat, 17 May 2025 11:07:36 INFO] epoch: 013 - iter: 03124 - valid loss: 3.1150 - bleu score: 0.1663 - full evaluation time: 28.4041
+[Sat, 17 May 2025 11:07:52 INFO] epoch: 014 - iter: 00200 - train loss: 0.8213 - time elapsed/per batch: 15.1225 0.0756
+[Sat, 17 May 2025 11:08:07 INFO] epoch: 014 - iter: 00400 - train loss: 0.8223 - time elapsed/per batch: 15.0838 0.0754
+[Sat, 17 May 2025 11:08:22 INFO] epoch: 014 - iter: 00600 - train loss: 0.8283 - time elapsed/per batch: 15.0140 0.0751
+[Sat, 17 May 2025 11:08:37 INFO] epoch: 014 - iter: 00800 - train loss: 0.8162 - time elapsed/per batch: 15.2529 0.0763
+[Sat, 17 May 2025 11:08:52 INFO] epoch: 014 - iter: 01000 - train loss: 0.8165 - time elapsed/per batch: 15.1246 0.0756
+[Sat, 17 May 2025 11:09:08 INFO] epoch: 014 - iter: 01200 - train loss: 0.8072 - time elapsed/per batch: 15.7006 0.0785
+[Sat, 17 May 2025 11:09:23 INFO] epoch: 014 - iter: 01400 - train loss: 0.8180 - time elapsed/per batch: 14.8603 0.0743
+[Sat, 17 May 2025 11:09:38 INFO] epoch: 014 - iter: 01600 - train loss: 0.8234 - time elapsed/per batch: 15.3308 0.0767
+[Sat, 17 May 2025 11:09:53 INFO] epoch: 014 - iter: 01800 - train loss: 0.7948 - time elapsed/per batch: 15.0736 0.0754
+[Sat, 17 May 2025 11:10:08 INFO] epoch: 014 - iter: 02000 - train loss: 0.8505 - time elapsed/per batch: 14.5970 0.0730
+[Sat, 17 May 2025 11:10:23 INFO] epoch: 014 - iter: 02200 - train loss: 0.8374 - time elapsed/per batch: 15.1330 0.0757
+[Sat, 17 May 2025 11:10:38 INFO] epoch: 014 - iter: 02400 - train loss: 0.8242 - time elapsed/per batch: 15.1860 0.0759
+[Sat, 17 May 2025 11:10:53 INFO] epoch: 014 - iter: 02600 - train loss: 0.8188 - time elapsed/per batch: 15.1500 0.0758
+[Sat, 17 May 2025 11:11:08 INFO] epoch: 014 - iter: 02800 - train loss: 0.8386 - time elapsed/per batch: 14.7870 0.0739
+[Sat, 17 May 2025 11:11:24 INFO] epoch: 014 - iter: 03000 - train loss: 0.7849 - time elapsed/per batch: 16.3170 0.0816
+[Sat, 17 May 2025 11:12:03 INFO] epoch: 014 - iter: 03124 - valid loss: 3.0925 - bleu score: 0.1750 - full evaluation time: 29.3720
+[Sat, 17 May 2025 11:12:18 INFO] epoch: 015 - iter: 00200 - train loss: 0.8114 - time elapsed/per batch: 15.1470 0.0757
+[Sat, 17 May 2025 11:12:34 INFO] epoch: 015 - iter: 00400 - train loss: 0.8045 - time elapsed/per batch: 15.3680 0.0768
+[Sat, 17 May 2025 11:12:49 INFO] epoch: 015 - iter: 00600 - train loss: 0.7934 - time elapsed/per batch: 15.2145 0.0761
+[Sat, 17 May 2025 11:13:04 INFO] epoch: 015 - iter: 00800 - train loss: 0.8374 - time elapsed/per batch: 14.7870 0.0739
+[Sat, 17 May 2025 11:13:19 INFO] epoch: 015 - iter: 01000 - train loss: 0.8243 - time elapsed/per batch: 15.0575 0.0753
+[Sat, 17 May 2025 11:13:34 INFO] epoch: 015 - iter: 01200 - train loss: 0.7840 - time elapsed/per batch: 15.4205 0.0771
+[Sat, 17 May 2025 11:13:49 INFO] epoch: 015 - iter: 01400 - train loss: 0.7990 - time elapsed/per batch: 15.0980 0.0755
+[Sat, 17 May 2025 11:14:05 INFO] epoch: 015 - iter: 01600 - train loss: 0.8207 - time elapsed/per batch: 15.4200 0.0771
+[Sat, 17 May 2025 11:14:20 INFO] epoch: 015 - iter: 01800 - train loss: 0.8199 - time elapsed/per batch: 15.0150 0.0751
+[Sat, 17 May 2025 11:14:34 INFO] epoch: 015 - iter: 02000 - train loss: 0.8408 - time elapsed/per batch: 14.7000 0.0735
+[Sat, 17 May 2025 11:14:50 INFO] epoch: 015 - iter: 02200 - train loss: 0.8106 - time elapsed/per batch: 15.4797 0.0774
+[Sat, 17 May 2025 11:15:05 INFO] epoch: 015 - iter: 02400 - train loss: 0.8184 - time elapsed/per batch: 15.0060 0.0750
+[Sat, 17 May 2025 11:15:20 INFO] epoch: 015 - iter: 02600 - train loss: 0.8180 - time elapsed/per batch: 15.1760 0.0759
+[Sat, 17 May 2025 11:15:35 INFO] epoch: 015 - iter: 02800 - train loss: 0.8243 - time elapsed/per batch: 15.2900 0.0765
+[Sat, 17 May 2025 11:15:51 INFO] epoch: 015 - iter: 03000 - train loss: 0.8213 - time elapsed/per batch: 15.1757 0.0759
+[Sat, 17 May 2025 11:16:29 INFO] epoch: 015 - iter: 03124 - valid loss: 3.0769 - bleu score: 0.1845 - full evaluation time: 29.2060
+[Sat, 17 May 2025 11:16:45 INFO] epoch: 016 - iter: 00200 - train loss: 0.7998 - time elapsed/per batch: 15.2910 0.0765
+[Sat, 17 May 2025 11:17:00 INFO] epoch: 016 - iter: 00400 - train loss: 0.7957 - time elapsed/per batch: 15.5365 0.0777
+[Sat, 17 May 2025 11:17:15 INFO] epoch: 016 - iter: 00600 - train loss: 0.7876 - time elapsed/per batch: 15.0505 0.0753
+[Sat, 17 May 2025 11:17:30 INFO] epoch: 016 - iter: 00800 - train loss: 0.8239 - time elapsed/per batch: 14.6645 0.0733
+[Sat, 17 May 2025 11:17:46 INFO] epoch: 016 - iter: 01000 - train loss: 0.7922 - time elapsed/per batch: 15.7000 0.0785
+[Sat, 17 May 2025 11:18:00 INFO] epoch: 016 - iter: 01200 - train loss: 0.8114 - time elapsed/per batch: 14.6850 0.0734
+[Sat, 17 May 2025 11:18:16 INFO] epoch: 016 - iter: 01400 - train loss: 0.7849 - time elapsed/per batch: 15.5213 0.0776
+[Sat, 17 May 2025 11:18:31 INFO] epoch: 016 - iter: 01600 - train loss: 0.8127 - time elapsed/per batch: 15.2210 0.0761
+[Sat, 17 May 2025 11:18:47 INFO] epoch: 016 - iter: 01800 - train loss: 0.7967 - time elapsed/per batch: 15.7085 0.0785
+[Sat, 17 May 2025 11:19:02 INFO] epoch: 016 - iter: 02000 - train loss: 0.8062 - time elapsed/per batch: 15.1865 0.0759
+[Sat, 17 May 2025 11:19:17 INFO] epoch: 016 - iter: 02200 - train loss: 0.8094 - time elapsed/per batch: 14.6990 0.0735
+[Sat, 17 May 2025 11:19:32 INFO] epoch: 016 - iter: 02400 - train loss: 0.8064 - time elapsed/per batch: 15.5060 0.0775
+[Sat, 17 May 2025 11:19:48 INFO] epoch: 016 - iter: 02600 - train loss: 0.8162 - time elapsed/per batch: 15.4855 0.0774
+[Sat, 17 May 2025 11:20:02 INFO] epoch: 016 - iter: 02800 - train loss: 0.8267 - time elapsed/per batch: 14.7775 0.0739
+[Sat, 17 May 2025 11:20:17 INFO] epoch: 016 - iter: 03000 - train loss: 0.7985 - time elapsed/per batch: 15.0760 0.0754
+[Sat, 17 May 2025 11:20:56 INFO] epoch: 016 - iter: 03124 - valid loss: 3.0569 - bleu score: 0.1874 - full evaluation time: 29.1860
+[Sat, 17 May 2025 11:21:11 INFO] epoch: 017 - iter: 00200 - train loss: 0.7900 - time elapsed/per batch: 15.1655 0.0758
+[Sat, 17 May 2025 11:21:26 INFO] epoch: 017 - iter: 00400 - train loss: 0.7977 - time elapsed/per batch: 14.8945 0.0745
+[Sat, 17 May 2025 11:21:42 INFO] epoch: 017 - iter: 00600 - train loss: 0.7983 - time elapsed/per batch: 15.6655 0.0783
+[Sat, 17 May 2025 11:21:58 INFO] epoch: 017 - iter: 00800 - train loss: 0.7927 - time elapsed/per batch: 15.7475 0.0787
+[Sat, 17 May 2025 11:22:12 INFO] epoch: 017 - iter: 01000 - train loss: 0.8128 - time elapsed/per batch: 14.7640 0.0738
+[Sat, 17 May 2025 11:22:27 INFO] epoch: 017 - iter: 01200 - train loss: 0.8042 - time elapsed/per batch: 14.9245 0.0746
+[Sat, 17 May 2025 11:22:43 INFO] epoch: 017 - iter: 01400 - train loss: 0.7922 - time elapsed/per batch: 15.5880 0.0779
+[Sat, 17 May 2025 11:22:59 INFO] epoch: 017 - iter: 01600 - train loss: 0.7953 - time elapsed/per batch: 15.6040 0.0780
+[Sat, 17 May 2025 11:23:13 INFO] epoch: 017 - iter: 01800 - train loss: 0.8076 - time elapsed/per batch: 14.5765 0.0729
+[Sat, 17 May 2025 11:23:28 INFO] epoch: 017 - iter: 02000 - train loss: 0.7943 - time elapsed/per batch: 15.0490 0.0752
+[Sat, 17 May 2025 11:23:43 INFO] epoch: 017 - iter: 02200 - train loss: 0.8108 - time elapsed/per batch: 14.9360 0.0747
+[Sat, 17 May 2025 11:23:59 INFO] epoch: 017 - iter: 02400 - train loss: 0.7822 - time elapsed/per batch: 15.4845 0.0774
+[Sat, 17 May 2025 11:24:14 INFO] epoch: 017 - iter: 02600 - train loss: 0.7927 - time elapsed/per batch: 15.2055 0.0760
+[Sat, 17 May 2025 11:24:29 INFO] epoch: 017 - iter: 02800 - train loss: 0.8236 - time elapsed/per batch: 14.7115 0.0736
+[Sat, 17 May 2025 11:24:44 INFO] epoch: 017 - iter: 03000 - train loss: 0.7964 - time elapsed/per batch: 15.2075 0.0760
+[Sat, 17 May 2025 11:25:22 INFO] epoch: 017 - iter: 03124 - valid loss: 3.0310 - bleu score: 0.1892 - full evaluation time: 28.4620
+[Sat, 17 May 2025 11:25:36 INFO] epoch: 018 - iter: 00200 - train loss: 0.8333 - time elapsed/per batch: 14.5805 0.0729
+[Sat, 17 May 2025 11:25:52 INFO] epoch: 018 - iter: 00400 - train loss: 0.7804 - time elapsed/per batch: 15.5340 0.0777
+[Sat, 17 May 2025 11:26:06 INFO] epoch: 018 - iter: 00600 - train loss: 0.8130 - time elapsed/per batch: 14.7600 0.0738
+[Sat, 17 May 2025 11:26:22 INFO] epoch: 018 - iter: 00800 - train loss: 0.7620 - time elapsed/per batch: 15.8736 0.0794
+[Sat, 17 May 2025 11:26:38 INFO] epoch: 018 - iter: 01000 - train loss: 0.7914 - time elapsed/per batch: 15.4631 0.0773
+[Sat, 17 May 2025 11:26:53 INFO] epoch: 018 - iter: 01200 - train loss: 0.7978 - time elapsed/per batch: 15.1647 0.0758
+[Sat, 17 May 2025 11:27:08 INFO] epoch: 018 - iter: 01400 - train loss: 0.7909 - time elapsed/per batch: 15.2236 0.0761
+[Sat, 17 May 2025 11:27:23 INFO] epoch: 018 - iter: 01600 - train loss: 0.7867 - time elapsed/per batch: 15.2018 0.0760
+[Sat, 17 May 2025 11:27:38 INFO] epoch: 018 - iter: 01800 - train loss: 0.7881 - time elapsed/per batch: 15.1491 0.0757
+[Sat, 17 May 2025 11:27:53 INFO] epoch: 018 - iter: 02000 - train loss: 0.7924 - time elapsed/per batch: 14.8744 0.0744
+[Sat, 17 May 2025 11:28:09 INFO] epoch: 018 - iter: 02200 - train loss: 0.7778 - time elapsed/per batch: 15.5605 0.0778
+[Sat, 17 May 2025 11:28:23 INFO] epoch: 018 - iter: 02400 - train loss: 0.8189 - time elapsed/per batch: 14.0726 0.0704
+[Sat, 17 May 2025 11:28:38 INFO] epoch: 018 - iter: 02600 - train loss: 0.7695 - time elapsed/per batch: 15.0273 0.0751
+[Sat, 17 May 2025 11:28:53 INFO] epoch: 018 - iter: 02800 - train loss: 0.8009 - time elapsed/per batch: 15.0978 0.0755
+[Sat, 17 May 2025 11:29:09 INFO] epoch: 018 - iter: 03000 - train loss: 0.7816 - time elapsed/per batch: 15.4195 0.0771
+[Sat, 17 May 2025 11:29:48 INFO] epoch: 018 - iter: 03124 - valid loss: 3.0210 - bleu score: 0.1955 - full evaluation time: 28.7218
+[Sat, 17 May 2025 11:30:03 INFO] epoch: 019 - iter: 00200 - train loss: 0.7802 - time elapsed/per batch: 15.0390 0.0752
+[Sat, 17 May 2025 11:30:18 INFO] epoch: 019 - iter: 00400 - train loss: 0.7808 - time elapsed/per batch: 15.4290 0.0771
+[Sat, 17 May 2025 11:30:33 INFO] epoch: 019 - iter: 00600 - train loss: 0.7860 - time elapsed/per batch: 15.1285 0.0756
+[Sat, 17 May 2025 11:30:48 INFO] epoch: 019 - iter: 00800 - train loss: 0.7582 - time elapsed/per batch: 15.2960 0.0765
+[Sat, 17 May 2025 11:31:03 INFO] epoch: 019 - iter: 01000 - train loss: 0.7988 - time elapsed/per batch: 14.9195 0.0746
+[Sat, 17 May 2025 11:31:19 INFO] epoch: 019 - iter: 01200 - train loss: 0.7652 - time elapsed/per batch: 15.1680 0.0758
+[Sat, 17 May 2025 11:31:34 INFO] epoch: 019 - iter: 01400 - train loss: 0.7799 - time elapsed/per batch: 15.2530 0.0763
+[Sat, 17 May 2025 11:31:49 INFO] epoch: 019 - iter: 01600 - train loss: 0.7685 - time elapsed/per batch: 15.4195 0.0771
+[Sat, 17 May 2025 11:32:05 INFO] epoch: 019 - iter: 01800 - train loss: 0.7736 - time elapsed/per batch: 15.2645 0.0763
+[Sat, 17 May 2025 11:32:20 INFO] epoch: 019 - iter: 02000 - train loss: 0.7843 - time elapsed/per batch: 15.2880 0.0764
+[Sat, 17 May 2025 11:32:35 INFO] epoch: 019 - iter: 02200 - train loss: 0.7782 - time elapsed/per batch: 14.9445 0.0747
+[Sat, 17 May 2025 11:32:50 INFO] epoch: 019 - iter: 02400 - train loss: 0.7784 - time elapsed/per batch: 15.4969 0.0775
+[Sat, 17 May 2025 11:33:06 INFO] epoch: 019 - iter: 02600 - train loss: 0.7814 - time elapsed/per batch: 15.4470 0.0772
+[Sat, 17 May 2025 11:33:21 INFO] epoch: 019 - iter: 02800 - train loss: 0.8127 - time elapsed/per batch: 15.3910 0.0770
+[Sat, 17 May 2025 11:33:36 INFO] epoch: 019 - iter: 03000 - train loss: 0.7914 - time elapsed/per batch: 15.1366 0.0757
+[Sat, 17 May 2025 11:34:15 INFO] epoch: 019 - iter: 03124 - valid loss: 3.0087 - bleu score: 0.1973 - full evaluation time: 29.2550

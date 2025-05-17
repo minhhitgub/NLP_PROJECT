@@ -1,0 +1,82 @@
+[Fri, 16 May 2025 21:29:24 INFO] .en * src vocab size = 10889
+[Fri, 16 May 2025 21:29:24 INFO] .vi * tgt vocab size = 5638
+[Fri, 16 May 2025 21:29:24 INFO] Building model...
+[Fri, 16 May 2025 21:29:25 INFO] Transformer(
+  (encoder): Encoder(
+    (embed): Embedding(10889, 32)
+    (pe): PositionalEncoder(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (layers): ModuleList(
+      (0-1): 2 x EncoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (attn): MultiHeadAttention(
+          (q_linear): Linear(in_features=32, out_features=32, bias=True)
+          (k_linear): Linear(in_features=32, out_features=32, bias=True)
+          (v_linear): Linear(in_features=32, out_features=32, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=32, out_features=32, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=32, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=32, bias=True)
+        )
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (norm): Norm()
+  )
+  (decoder): Decoder(
+    (embed): Embedding(5638, 32)
+    (pe): PositionalEncoder(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (layers): ModuleList(
+      (0-1): 2 x DecoderLayer(
+        (norm_1): Norm()
+        (norm_2): Norm()
+        (norm_3): Norm()
+        (dropout_1): Dropout(p=0.1, inplace=False)
+        (dropout_2): Dropout(p=0.1, inplace=False)
+        (dropout_3): Dropout(p=0.1, inplace=False)
+        (attn_1): MultiHeadAttention(
+          (q_linear): Linear(in_features=32, out_features=32, bias=True)
+          (k_linear): Linear(in_features=32, out_features=32, bias=True)
+          (v_linear): Linear(in_features=32, out_features=32, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=32, out_features=32, bias=True)
+        )
+        (attn_2): MultiHeadAttention(
+          (q_linear): Linear(in_features=32, out_features=32, bias=True)
+          (k_linear): Linear(in_features=32, out_features=32, bias=True)
+          (v_linear): Linear(in_features=32, out_features=32, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (out): Linear(in_features=32, out_features=32, bias=True)
+        )
+        (ff): FeedForward(
+          (linear_1): Linear(in_features=32, out_features=2048, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear_2): Linear(in_features=2048, out_features=32, bias=True)
+        )
+      )
+    )
+    (norm): Norm()
+  )
+  (out): Linear(in_features=32, out_features=5638, bias=True)
+)
+[Fri, 16 May 2025 21:29:25 INFO] Encoder: 623520
+[Fri, 16 May 2025 21:29:25 INFO] Decoder: 464064
+[Fri, 16 May 2025 21:29:25 INFO] * Number of parameters: 1087584
+[Fri, 16 May 2025 21:29:25 INFO] Starting training on cuda
+[Fri, 16 May 2025 21:29:29 INFO] epoch: 000 - iter: 00200 - train loss: 4.7885 - time elapsed/per batch: 4.2418 0.0212
+[Fri, 16 May 2025 21:29:33 INFO] epoch: 000 - iter: 00400 - train loss: 4.3339 - time elapsed/per batch: 3.7069 0.0185
+[Fri, 16 May 2025 21:29:37 INFO] epoch: 000 - iter: 00600 - train loss: 3.8143 - time elapsed/per batch: 3.9851 0.0199
+[Fri, 16 May 2025 21:29:41 INFO] epoch: 000 - iter: 00800 - train loss: 3.6092 - time elapsed/per batch: 3.8767 0.0194
+[Fri, 16 May 2025 21:29:45 INFO] epoch: 000 - iter: 01000 - train loss: 3.5497 - time elapsed/per batch: 4.2343 0.0212
+[Fri, 16 May 2025 21:29:51 INFO] epoch: 000 - iter: 01200 - train loss: 3.5117 - time elapsed/per batch: 5.4321 0.0272
+[Fri, 16 May 2025 21:29:59 INFO] epoch: 000 - iter: 01400 - train loss: 3.4456 - time elapsed/per batch: 8.2320 0.0412
+[Fri, 16 May 2025 21:31:03 INFO] epoch: 000 - iter: 01508 - valid loss: 5.0811 - bleu score: 0.0039 - full evaluation time: 59.1639
+[Fri, 16 May 2025 21:31:07 INFO] epoch: 001 - iter: 00200 - train loss: 3.3295 - time elapsed/per batch: 4.0436 0.0202
